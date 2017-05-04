@@ -4,8 +4,7 @@ To create a way to enter and store a customer's payment information using the Ba
 
 ### Context
 ---
-An option for entering customer payment options is needed in the Bangazon CLI so that customers can pay for their order with their preferred payment method.
-
+An option for entering customer payment options is needed in the Bangazon CLI so that customers can pay for their order with their preferred payment method. If you need to refer to the project ERD then click [here](https://github.com/EducatedCamels/Educated_Camels_Company_Docs/blob/master/resources.md).
 ### The process 
 ---
 - [ ] If you do not have the current master, pull down CLI-Bangazon-App Project onto your local computer and create a new git branch
