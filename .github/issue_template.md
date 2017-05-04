@@ -9,9 +9,10 @@ An option for entering customer payment options is needed in the Bangazon CLI so
 ### The process 
 ---
 - [ ] Pull Down CLI-Bangazon-App Project onto your local computer and create a new git branch
--  [ ] In the appropriate file, create PaymentOption class with properties listed in ERD. Also assign related methods to admin (addPaymentType, deletePaymentType, others TBD).
--  [ ] In testing file, create unit-tests to test every method on the PaymentOption class.
--  [ ] Run tests to ensure that all methods on PaymentOption class pass and return what you expect them to.
+- [ ] In the appropriate file, create Payment class with properties listed in ERD. Assign the following related methods to AdminTask Class: addPaymentType, deletePaymentType, others TBD.
+- [ ] Be sure to include properties for "Payment Type" and "Payment Account Number." Both should accept a string.
+-  [ ] In testing file, create unit tests to test every method relevant to the Payment Class.
+-  [ ] Run tests to ensure that all methods relevant to Payment Class pass and return what you expect them to.
 
 ### Outcome/expected behavior
 ---
