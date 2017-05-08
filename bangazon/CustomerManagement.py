@@ -1,1 +1,1 @@
-placeholder
+ #active_customer = null
