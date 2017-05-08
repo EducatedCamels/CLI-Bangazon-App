@@ -4,25 +4,21 @@
 ## 2. STATUS:
 
 
-## 3. MIGRATIONS:
-***YES*** (has been migrated) *or* ***NO*** (has not been migrated)
-
-
-## 4. DESCRIPTION:
+## 3. DESCRIPTION:
 ***Rationale(reason behind updated changes)***
 
 ***Expected behavior of changes***
 
 
-## 5. RELATED TICKETS:
+## 4. RELATED TICKETS:
 
 
 
-## 6. FILES CHANGED:
+## 5. FILES CHANGED:
 
 
 
-## 7. STEPS TO RUN PROJECT:
+## 6. STEPS TO RUN PROJECT:
 
 #### ***Installation Steps***
 
