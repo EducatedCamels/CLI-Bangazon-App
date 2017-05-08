@@ -43,7 +43,7 @@ class TestCustomerManagement(unittest.TestCase):
 
         save_payment_option_to_database(self.payment_type,self.account_number, active_customer)
 
-        payment_id = get_payment_option(self.payment_type,self.account_number active_customer)
+        payment_id = get_payment_option(self.payment_type,self.account_number, active_customer)
 
         self.assertIsNotNone(payment_id)
 
