@@ -1,9 +1,10 @@
 import sys
 
 def get_product(product_name, price):
+	return 3
 
 def add_product_to_order(active_customer, product_id):
-    return  1
+	return 1
 
 def get_all_products():
 	product_list = [("Bike", "Doll", "Slinky")]
