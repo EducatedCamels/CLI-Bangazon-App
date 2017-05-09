@@ -74,6 +74,7 @@ class TestProductManagement(unittest.TestCase):
 
         payment_id = get_payment_option(self.payment_type["payment_type"],self.payment_type["account_number"], active_customer)
 
-        select_payment_option(1)  
+        selected_payment = select_payment_option(1)
+        self.assertIsNotNone(selected_payment)
 
         is_complete = complete_order(payment_id, active_order)
