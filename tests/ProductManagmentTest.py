@@ -12,19 +12,19 @@ class TestProductManagement(unittest.TestCase):
 
         self.product = {"product_name": "unicorn pillow", "price": "$12.00"}
 
-    # def test_product_is_saved_to_database(self):
-    #     save_product_to_database(self.product["product_name"],self.product["price"])
-    #
-    #     product_id = get_product(self.product["product_name"],self.product["price"])
-    #
-    #     self.assertIsNotNone(product_id)
-    #
-    # def test_get_all_products(self):
-    #     save_product_to_database(self.product["product_name"],self.product["price"])
-    #
-    #     product_list = get_all_products()
-    #
-    #     self.assertTrue(len(product_list) > 0)
+    def test_product_is_saved_to_database(self):
+        save_product_to_database(self.product["product_name"],self.product["price"])
+    
+        product_id = get_product(self.product["product_name"],self.product["price"])
+    
+        self.assertIsNotNone(product_id)
+    
+    def test_get_all_products(self):
+        save_product_to_database(self.product["product_name"],self.product["price"])
+    
+        product_list = get_all_products()
+    
+        self.assertTrue(len(product_list) > 0)
 
     def test_add_product_to_order(self):
         save_customer_to_database(self.customer["first_name"],self.customer["last_name"],self.customer["phone_number"],self.customer["address"])
