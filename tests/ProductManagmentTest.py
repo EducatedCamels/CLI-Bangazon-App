@@ -64,7 +64,7 @@ class TestProductManagement(unittest.TestCase):
 
         self.assertIsNotNone(product_id)
 
-        product_order_id = add_product_to_order(active_customer, product_id)
+        product_order_id = add_product_to_order(1, 2) #1 was active_customer, 2 was product_id before dummy data was input
         self.assertIsNotNone(product_order_id)
 
         active_order = get_active_order(active_customer)
