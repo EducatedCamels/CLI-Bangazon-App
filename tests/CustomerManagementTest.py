@@ -7,7 +7,7 @@ class TestCustomerManagement(unittest.TestCase):
     def setUpClass(self):
         self.customer = {"first_name": "Meg", "last_name": "Ducharme", "address": "500 Interstate Blvd S", "phone_number": "4104561238"}
         self.payment_type = {"payment_type": "Visa", "account_number": "65ADF46ADG454"}
-
+        
     def test_customer_is_saved_to_database(self):
         save_customer_to_database(self.customer["first_name"],self.customer["last_name"],self.customer["phone_number"],self.customer["address"])
 
@@ -24,7 +24,7 @@ class TestCustomerManagement(unittest.TestCase):
 
     def test_select_active_customer(self):
         save_customer_to_database(self.customer["first_name"],self.customer["last_name"],self.customer["phone_number"],self.customer["address"])
-     
+
         get_customer(self.customer["first_name"],self.customer["last_name"],self.customer["phone_number"],self.customer["address"])
 
         select_active_customer(2)
@@ -48,7 +48,7 @@ class TestCustomerManagement(unittest.TestCase):
         save_payment_option_to_database(self.payment_type["payment_type"],self.payment_type["account_number"], active_customer)
 
         payment_id = get_payment_option(self.payment_type["payment_type"],self.payment_type["account_number"], active_customer)
-        
+
         self.assertIsNotNone(payment_id)
 
 
