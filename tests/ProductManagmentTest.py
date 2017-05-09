@@ -5,7 +5,7 @@ from ProductManagement import *
 
 class TestProductManagement(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
+    def setUpClass(self): 
         self.customer = {"first_name": "Meg", "last_name": "Ducharme", "address": "500 Interstate Blvd S", "phone_number": "4104561238"}
 
         self.payment_type = {"payment_type": "Visa", "account_number": "65ADF46ADG454"}
@@ -76,6 +76,5 @@ class TestProductManagement(unittest.TestCase):
 
         selected_payment = select_payment_option(1)
         self.assertIsNotNone(selected_payment)
-
 
         is_complete = complete_order(payment_id, active_order)
