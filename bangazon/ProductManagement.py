@@ -1,5 +1,7 @@
 import sys
 
+def get_product(product_name, price):
+
 def add_product_to_order(active_customer, product_id):
     return  1
 
@@ -16,6 +18,6 @@ def save_product_to_database(product_name, price):
 def get_active_order(active_customer):
 	return 1
 
-
 def select_payment_option(selected_payment):
+
     return 1
