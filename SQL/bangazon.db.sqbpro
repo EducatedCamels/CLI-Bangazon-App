@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/jonat/workspace/python/educated_camels/CLI-Bangazon-App/SQL/bangazon.db"/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="856"/><expanded_item id="0" parent="-1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="-1"/><expanded_item id="2" parent="-1"/><expanded_item id="3" parent="-1"/></tab_structure><tab_browse><current_table name="Customer"/><default_encoding codec=""/><browsetable_info data="AAAAAQAAABAAQwB1AHMAdABvAG0AZQByAG6+sAAAATQAAAAAAAAAAAAAAAAA/////w=="/></tab_browse><tab_sql><sql name="bangazon.sql">	drop table Customer
+
+	create table Customer (
+
+		CustomerID integer not null primary key autoincrement,
+
+		first_name text not null,
+
+		last_name text not null,
+
+		address text not null,
+
+		phone_number integer not null	
+
+	)
+
+	
+
+	create table Product (
+
+		ProductID integer not null primary key autoincrement,
+
+		price integer not null,
+
+		title text not null
+
+	
+
+	)
+
+	create table Payment(
+
+		PaymentID integer not null primary key autoincrement,
+
+		payment_type text not null,
+
+		account_number integer not null ,
+
+		CustomerID integer not null,
+
+		foreign key (CustomerID) references Customer(CustomerID)
+
+	)
+
+	create table ProductOrder(
+
+		ProductOrderID integer not null primary key autoincrement,
+
+		ProductID integer not null,
+
+		OrderID integer not null,
+
+		foreign key (ProductID) references Product(ProductID),
+
+		foreign key (OrderID) references `Order`(OrderID)
+
+	)
+
+	
+
+	create table `Order` (
+
+		OrderID integer not null primary key autoincrement,
+
+		CustomerID integer not null,
+
+		PaymentID integer not null,
+
+		foreign key (CustomerID) references Customer(CustomerID),
+
+		foreign key (PaymentID) references Payment(PaymentID)
+
+	)</sql><current_tab id="0"/></tab_sql></sqlb_project>
