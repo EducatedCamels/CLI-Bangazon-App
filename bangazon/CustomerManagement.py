@@ -5,7 +5,16 @@ active_customer = None
 
 def save_customer_to_database(first_name, last_name, address, phone_number):
 	pass
+    ''' Allows user to add a new Customer Account and information to the database
+    '''
+    with sqlite3.connect('bangazon.db') as connection:
+        c = connection.cursor()
 
+
+    c.execute("insert into Customer values (?, ?, ?, ?, ?, ?)",
+                    (None, first_name, last_name, address, phone_number))
+
+    conn.commit()
 
 def get_customer(first_name, last_name, address, phone_number):
 	return 1
@@ -34,5 +43,5 @@ def get_payment_option(payment_type, account_number, active_customer):
 
 
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
 
