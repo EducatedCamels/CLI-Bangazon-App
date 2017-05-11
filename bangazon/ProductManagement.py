@@ -1,4 +1,5 @@
 import sys
+import sqlite3
 
 def get_product(product_name, price):
 	return 3
@@ -21,4 +22,12 @@ def get_active_order(active_customer):
 
 def select_payment_option(selected_payment):
 
-    return 1
+    # return 1
+
+	with sqlite3.connect('bangazon.db') as connection:
+		c = connection.cursor()
+
+		c.execute("insert into Order values(?, ?, ?, ?)",
+				(None, payment_type, account_number, active_customer))
+
+		connection.commit()

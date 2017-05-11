@@ -1,4 +1,5 @@
-import sys
+# import sys
+import sqlite3
  
 active_customer = None
 
@@ -26,13 +27,18 @@ def select_active_customer(customer_id):
 
 
 def save_payment_option_to_database(payment_type, account_number, active_customer):
-	pass
+
+	with sqlite3.connect('./SQL/bangazon.db') as conn:
+		c = conn.cursor()
+
+		c.execute("insert into Payment values(?, ?, ?, ?)",
+				(None, payment_type, account_number, active_customer))
+
+		conn.commit()
 
 
 def get_payment_option(payment_type, account_number, active_customer):
 	return 2
 
 
-
-# if __name__ == '__main__':
 
