@@ -7,8 +7,8 @@ def save_customer_to_database(first_name, last_name, address, phone_number):
 	pass
     ''' Allows user to add a new Customer Account and information to the database
     '''
-    with sqlite3.connect('bangazon.db') as connection:
-        c = connection.cursor()
+    with sqlite3.connect('bangazon.db') as conn:
+        c = conn.cursor()
 
 
     c.execute("insert into Customer values (?, ?, ?, ?, ?, ?)",

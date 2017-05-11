@@ -6,3 +6,6 @@
         phone_number = input("Phone Number: ")
 
         save_customer_to_database(first_name, last_name, address, phone_number)
+        
+
+
