@@ -46,6 +46,7 @@ class TestProductManagement(unittest.TestCase):
         self.assertTrue(len(product_list) > 0)
 
         product_order_id = add_product_to_order(1, 2)
+        
         self.assertIsNotNone(product_order_id)
 
     def test_complete_order(self):

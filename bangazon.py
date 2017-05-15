@@ -5,7 +5,6 @@ sys.path.append('bangazon')
 from CustomerManagement import *
 from ProductManagement import *
 
-active_customer = 1
 
 
 class Bangazon():
@@ -46,13 +45,19 @@ class Bangazon():
 
             customer_id = input("Select active customer")
 
-            select_active_customer(customer_id)
+            active_customer = select_active_customer(customer_id)
+
+            get_active_customer()
 
 
 
         if choice == "3":
             payment_type = input("What is your payment type? ")
             account_number = input("What is your account number? ")
+
+            # get_active_customer()
+
+            # active_customer = customer_id
 
             save_payment_option_to_database(payment_type, account_number, active_customer)    
 
@@ -67,12 +72,14 @@ class Bangazon():
             product_id = input("Select product to add to cart")
 
             add_product_to_order(product_id)
+            
+            get_active_order()
 
 
 
         if choice == "5":
 
-            get_active_order()
+            get_active_order(order_id)
 
             selected_payment = input("Choose your payment type")
 
@@ -80,7 +87,7 @@ class Bangazon():
 
             complete_order()
 
-            # print("Your order of '{}' is complete and your total is '{}'.")
+            # print("Your order of '{}' is complete and your total is '{}'.".format)
 
 
         self.main_menu()
