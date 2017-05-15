@@ -21,7 +21,7 @@ def get_customer(first_name, last_name, address, phone_number):
 
 
 def get_all_customers():
-    customer_list = [("Meg", "Dean", "Kayla")]
+    customer_list = [("Meg",), ("Dean",),("Kayla",)]
     return customer_list
         
 

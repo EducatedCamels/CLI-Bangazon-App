@@ -8,7 +8,7 @@ def add_product_to_order(active_customer, product_id):
 	return 1
 
 def get_all_products():
-	product_list = [("Bike", "Doll", "Slinky")]
+	product_list = [("Bike",), ("Doll",), ("Slinky",)]
 	return product_list
 
 def complete_order(payment_id, active_order):
